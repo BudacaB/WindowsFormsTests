@@ -20,14 +20,31 @@ namespace WindowsFormsApp1
 
         private void btnCreateCar_Click(object sender, EventArgs e)
         {
-            //if (string.IsNullOrEmpty(txtCarBrand.Text))
-            //{
-            //    lblResult.Text = "Please insert car brand";
-            //    return;
-            //}
-            var car = new Car(txtCarBrand.Text.ToUpperInvariant(), Convert.ToInt32(numYear.Value), txtColor.Text.ToUpperInvariant(), Convert.ToInt32(numCylinder.Value));
-            var bmw = new Bemvew("BMW", Convert.ToInt32(numYear.Value), txtColor.Text.ToUpperInvariant(), Convert.ToInt32(numCylinder.Value));
-            var serializedCar = JsonConvert.SerializeObject(bmw);
+            Car car = null;
+
+            if (string.IsNullOrEmpty(txtCarBrand.Text))
+            {
+                lblResult.Text = "Please insert car brand";
+                return;
+            }
+
+            if (txtCarBrand.Text.ToUpper() == "BMW")
+            {
+                car = new Bemvew(Convert.ToInt32(numYear.Value), txtColor.Text.ToUpperInvariant(), Convert.ToInt32(numCylinder.Value));
+            }
+
+            if (txtCarBrand.Text.ToUpper() == "AUDI")
+            {
+                car = new Audi(Convert.ToInt32(numYear.Value), txtColor.Text.ToUpperInvariant(), Convert.ToInt32(numCylinder.Value));
+            } 
+
+            if (txtCarBrand.Text.ToUpper() != "BMW" && txtCarBrand.Text.ToUpper() != "AUDI")
+            {
+                lblResult.Text = $"Car {txtCarBrand.Text} is not in stock";
+                return;
+            }
+
+            var serializedCar = JsonConvert.SerializeObject(car);
             lblResult.Text = serializedCar;
         }
 
@@ -39,7 +56,17 @@ namespace WindowsFormsApp1
         private void Form1_Load(object sender, EventArgs e)
         {
             numYear.Maximum = DateTime.Now.Year;
-            //var manager = new AWSManager();
+
+            // graceful error handling
+            try
+            {
+                var manager = new AWSManager();
+            }
+            catch (Exception exc)
+            {
+                lblResult.Text = exc.InnerException.Message;
+            }
+            
         }
 
         private void label1_Click(object sender, EventArgs e)

@@ -13,6 +13,8 @@ namespace WindowsFormsApp1
         {
             AmazonDynamoDBConfig clientConfig = new AmazonDynamoDBConfig();
             clientConfig.ServiceURL = "http://127.0.0.1:8000";
+            clientConfig.Timeout = TimeSpan.FromSeconds(1);
+            clientConfig.MaxErrorRetry = 1;
             AmazonDynamoDBClient client = new AmazonDynamoDBClient(clientConfig);
             var tables = client.ListTables();
         }
