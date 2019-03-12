@@ -10,11 +10,15 @@ namespace WindowsFormsApp1
     {
         public string Brand { get; set; }
         public int Year { get; set; }
+        public string Color { get; set; }
+        public int CylinderNum { get; set; }
 
-        public Car(string paramBrand, int paramYear)
+        public Car(string paramBrand, int paramYear, string paramColor, int paramCylinderNum)
         {
             this.Brand = paramBrand;
             this.Year = paramYear;
+            this.Color = paramColor;
+            this.CylinderNum = paramCylinderNum;
         }
     }
 }

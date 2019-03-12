@@ -20,12 +20,13 @@ namespace WindowsFormsApp1
 
         private void btnCreateCar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtCarBrand.Text))
-            {
-                lblResult.Text = "Please insert car brand";
-                return;
-            }
-            var bmw = new Car(txtCarBrand.Text.ToUpperInvariant(), Convert.ToInt32(numYear.Value));
+            //if (string.IsNullOrEmpty(txtCarBrand.Text))
+            //{
+            //    lblResult.Text = "Please insert car brand";
+            //    return;
+            //}
+            var car = new Car(txtCarBrand.Text.ToUpperInvariant(), Convert.ToInt32(numYear.Value), txtColor.Text.ToUpperInvariant(), Convert.ToInt32(numCylinder.Value));
+            var bmw = new Bemvew("BMW", Convert.ToInt32(numYear.Value), txtColor.Text.ToUpperInvariant(), Convert.ToInt32(numCylinder.Value));
             var serializedCar = JsonConvert.SerializeObject(bmw);
             lblResult.Text = serializedCar;
         }
@@ -38,7 +39,12 @@ namespace WindowsFormsApp1
         private void Form1_Load(object sender, EventArgs e)
         {
             numYear.Maximum = DateTime.Now.Year;
-            var manager = new AWSManager();
+            //var manager = new AWSManager();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

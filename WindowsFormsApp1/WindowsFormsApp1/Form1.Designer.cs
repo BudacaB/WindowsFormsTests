@@ -35,7 +35,12 @@
             this.btnCreateCar = new System.Windows.Forms.Button();
             this.lblResult = new System.Windows.Forms.Label();
             this.numYear = new System.Windows.Forms.NumericUpDown();
+            this.txtColor = new System.Windows.Forms.TextBox();
+            this.lblColor = new System.Windows.Forms.Label();
+            this.lblCylinder = new System.Windows.Forms.Label();
+            this.numCylinder = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numYear)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numCylinder)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNewCar
@@ -114,11 +119,63 @@
             0,
             0});
             // 
+            // txtColor
+            // 
+            this.txtColor.Location = new System.Drawing.Point(315, 114);
+            this.txtColor.Name = "txtColor";
+            this.txtColor.Size = new System.Drawing.Size(100, 20);
+            this.txtColor.TabIndex = 8;
+            // 
+            // lblColor
+            // 
+            this.lblColor.AutoSize = true;
+            this.lblColor.Location = new System.Drawing.Point(339, 66);
+            this.lblColor.Name = "lblColor";
+            this.lblColor.Size = new System.Drawing.Size(31, 13);
+            this.lblColor.TabIndex = 9;
+            this.lblColor.Text = "Color";
+            this.lblColor.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // lblCylinder
+            // 
+            this.lblCylinder.AutoSize = true;
+            this.lblCylinder.Location = new System.Drawing.Point(509, 66);
+            this.lblCylinder.Name = "lblCylinder";
+            this.lblCylinder.Size = new System.Drawing.Size(66, 13);
+            this.lblCylinder.TabIndex = 11;
+            this.lblCylinder.Text = "CylinderNum";
+            // 
+            // numCylinder
+            // 
+            this.numCylinder.Location = new System.Drawing.Point(482, 114);
+            this.numCylinder.Maximum = new decimal(new int[] {
+            16,
+            0,
+            0,
+            0});
+            this.numCylinder.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numCylinder.Name = "numCylinder";
+            this.numCylinder.Size = new System.Drawing.Size(120, 20);
+            this.numCylinder.TabIndex = 12;
+            this.numCylinder.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(762, 399);
+            this.Controls.Add(this.numCylinder);
+            this.Controls.Add(this.lblCylinder);
+            this.Controls.Add(this.lblColor);
+            this.Controls.Add(this.txtColor);
             this.Controls.Add(this.numYear);
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.btnCreateCar);
@@ -130,6 +187,7 @@
             this.Text = "MyApp";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numYear)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numCylinder)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,6 +202,10 @@
         private System.Windows.Forms.Button btnCreateCar;
         private System.Windows.Forms.Label lblResult;
         private System.Windows.Forms.NumericUpDown numYear;
+        private System.Windows.Forms.TextBox txtColor;
+        private System.Windows.Forms.Label lblColor;
+        private System.Windows.Forms.Label lblCylinder;
+        private System.Windows.Forms.NumericUpDown numCylinder;
     }
 }
 
