@@ -13,35 +13,57 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
         }
-
+        
         private void btnCreateCar_Click(object sender, EventArgs e)
         {
             Car car = null;
+            var brand = txtCarBrand.Text.ToUpper();
 
             if (string.IsNullOrEmpty(txtCarBrand.Text))
-            {
-                lblResult.Text = "Please insert car brand";
-                return;
-            }
+            //{
+            //    lblResult.Text = "Please insert car brand";
+            //    return;
+            //}
 
-            if (txtCarBrand.Text.ToUpper() == "BMW")
-            {
-                car = new Bemvew(Convert.ToInt32(numYear.Value), txtColor.Text.ToUpperInvariant(), Convert.ToInt32(numCylinder.Value));
-            }
+            //if (txtCarBrand.Text.ToUpper() == "BMW")
+            //{
+            //    car = new Bemvew(Convert.ToInt32(numYear.Value), txtColor.Text.ToUpperInvariant(), Convert.ToInt32(numCylinder.Value));
+            //}
 
-            if (txtCarBrand.Text.ToUpper() == "AUDI")
-            {
-                car = new Audi(Convert.ToInt32(numYear.Value), txtColor.Text.ToUpperInvariant(), Convert.ToInt32(numCylinder.Value));
-            } 
+            //if (txtCarBrand.Text.ToUpper() == "AUDI")
+            //{
+            //    car = new Audi(Convert.ToInt32(numYear.Value), txtColor.Text.ToUpperInvariant(), Convert.ToInt32(numCylinder.Value));
+            //}
 
-            if (txtCarBrand.Text.ToUpper() != "BMW" && txtCarBrand.Text.ToUpper() != "AUDI")
+            //if (txtCarBrand.Text.ToUpper() != "BMW" && txtCarBrand.Text.ToUpper() != "AUDI")
+            //{
+            //    lblResult.Text = $"car {txtCarBrand.Text} is not in stock";
+            //    return;
+            //}
+
+            switch(brand)
             {
-                lblResult.Text = $"Car {txtCarBrand.Text} is not in stock";
-                return;
+                case "BMW":
+                    car = new Bemvew(Convert.ToInt32(numYear.Value), txtColor.Text.ToUpperInvariant(), Convert.ToInt32(numCylinder.Value));
+                    break;
+                case "AUDI":
+                    car = new Audi(Convert.ToInt32(numYear.Value), txtColor.Text.ToUpperInvariant(), Convert.ToInt32(numCylinder.Value));
+                    break;
+                case "LANCIA":
+                    car = new Lancia(Convert.ToInt32(numYear.Value), txtColor.Text.ToUpperInvariant(), Convert.ToInt32(numCylinder.Value));
+                    break;
+                case null:
+                case "":
+                    lblResult.Text = "Please insert car brand";
+                    break;
+                default:
+                    lblResult.Text = $"car {txtCarBrand.Text} is not in stock";
+                    break;
             }
 
             var serializedCar = JsonConvert.SerializeObject(car);

@@ -20,5 +20,10 @@ namespace WindowsFormsApp1
             this.Color = paramColor;
             this.CylinderNum = paramCylinderNum;
         }
+
+        public virtual string ShowBrand()
+        {
+            return "The brand is";
+        }
     }
 }
