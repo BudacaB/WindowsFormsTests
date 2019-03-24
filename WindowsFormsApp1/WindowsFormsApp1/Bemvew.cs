@@ -13,5 +13,10 @@ namespace WindowsFormsApp1
         {
            
         }
+
+        public override string ShowBrand()
+        {
+            return "The brand is a furious BMW";
+        }
     }
 }

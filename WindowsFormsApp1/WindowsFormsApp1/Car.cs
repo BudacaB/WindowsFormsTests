@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
 
         public virtual string ShowBrand()
         {
-            return "The brand is";
+            return "The brand is " + this.Brand;
         }
     }
 }

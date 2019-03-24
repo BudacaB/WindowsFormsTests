@@ -39,6 +39,7 @@
             this.lblColor = new System.Windows.Forms.Label();
             this.lblCylinder = new System.Windows.Forms.Label();
             this.numCylinder = new System.Windows.Forms.NumericUpDown();
+            this.lblArrayResult = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCylinder)).BeginInit();
             this.SuspendLayout();
@@ -167,11 +168,20 @@
             0,
             0});
             // 
+            // lblArrayResult
+            // 
+            this.lblArrayResult.AutoSize = true;
+            this.lblArrayResult.Location = new System.Drawing.Point(454, 317);
+            this.lblArrayResult.Name = "lblArrayResult";
+            this.lblArrayResult.Size = new System.Drawing.Size(0, 13);
+            this.lblArrayResult.TabIndex = 13;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(762, 399);
+            this.Controls.Add(this.lblArrayResult);
             this.Controls.Add(this.numCylinder);
             this.Controls.Add(this.lblCylinder);
             this.Controls.Add(this.lblColor);
@@ -206,6 +216,7 @@
         private System.Windows.Forms.Label lblColor;
         private System.Windows.Forms.Label lblCylinder;
         private System.Windows.Forms.NumericUpDown numCylinder;
+        private System.Windows.Forms.Label lblArrayResult;
     }
 }
 

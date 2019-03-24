@@ -23,8 +23,9 @@ namespace WindowsFormsApp1
         {
             Car car = null;
             var brand = txtCarBrand.Text.ToUpper();
+            List<Car> cars = new List<Car>();
 
-            if (string.IsNullOrEmpty(txtCarBrand.Text))
+            //if (string.IsNullOrEmpty(txtCarBrand.Text))
             //{
             //    lblResult.Text = "Please insert car brand";
             //    return;
@@ -46,16 +47,22 @@ namespace WindowsFormsApp1
             //    return;
             //}
 
-            switch(brand)
+            switch (brand)
             {
-                case "BMW":
+                case ModelsInStock.BMW:
                     car = new Bemvew(Convert.ToInt32(numYear.Value), txtColor.Text.ToUpperInvariant(), Convert.ToInt32(numCylinder.Value));
+                    lblResult.Text = JsonConvert.SerializeObject(car);
+                    cars.Add(car);
                     break;
-                case "AUDI":
+                case ModelsInStock.AUDI:
                     car = new Audi(Convert.ToInt32(numYear.Value), txtColor.Text.ToUpperInvariant(), Convert.ToInt32(numCylinder.Value));
+                    lblResult.Text = JsonConvert.SerializeObject(car);
+                    cars.Add(car);
                     break;
-                case "LANCIA":
+                case ModelsInStock.LANCIA:
                     car = new Lancia(Convert.ToInt32(numYear.Value), txtColor.Text.ToUpperInvariant(), Convert.ToInt32(numCylinder.Value));
+                    lblResult.Text = JsonConvert.SerializeObject(car);
+                    cars.Add(car);
                     break;
                 case null:
                 case "":
@@ -66,8 +73,14 @@ namespace WindowsFormsApp1
                     break;
             }
 
-            var serializedCar = JsonConvert.SerializeObject(car);
-            lblResult.Text = serializedCar;
+            //var serializedCar = JsonConvert.SerializeObject(car);
+            //lblResult.Text = serializedCar;
+
+            foreach (var auto in cars)
+            {
+                lblArrayResult.Text = auto.ShowBrand();
+            }
+
         }
 
         private void txtCarBrand_TextChanged(object sender, EventArgs e)
