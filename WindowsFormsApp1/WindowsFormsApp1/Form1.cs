@@ -108,5 +108,10 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void numCylinder_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

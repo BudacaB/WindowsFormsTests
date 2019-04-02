@@ -40,8 +40,11 @@
             this.lblCylinder = new System.Windows.Forms.Label();
             this.numCylinder = new System.Windows.Forms.NumericUpDown();
             this.lblArrayResult = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCylinder)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNewCar
@@ -140,7 +143,7 @@
             // lblCylinder
             // 
             this.lblCylinder.AutoSize = true;
-            this.lblCylinder.Location = new System.Drawing.Point(509, 66);
+            this.lblCylinder.Location = new System.Drawing.Point(482, 66);
             this.lblCylinder.Name = "lblCylinder";
             this.lblCylinder.Size = new System.Drawing.Size(66, 13);
             this.lblCylinder.TabIndex = 11;
@@ -148,7 +151,7 @@
             // 
             // numCylinder
             // 
-            this.numCylinder.Location = new System.Drawing.Point(482, 114);
+            this.numCylinder.Location = new System.Drawing.Point(457, 114);
             this.numCylinder.Maximum = new decimal(new int[] {
             16,
             0,
@@ -167,6 +170,7 @@
             0,
             0,
             0});
+            this.numCylinder.ValueChanged += new System.EventHandler(this.numCylinder_ValueChanged);
             // 
             // lblArrayResult
             // 
@@ -176,11 +180,44 @@
             this.lblArrayResult.Size = new System.Drawing.Size(0, 13);
             this.lblArrayResult.TabIndex = 13;
             // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(619, 114);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            16,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.TabIndex = 14;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(643, 66);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "MotelType";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(762, 399);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.lblArrayResult);
             this.Controls.Add(this.numCylinder);
             this.Controls.Add(this.lblCylinder);
@@ -198,6 +235,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numYear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCylinder)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,6 +255,8 @@
         private System.Windows.Forms.Label lblCylinder;
         private System.Windows.Forms.NumericUpDown numCylinder;
         private System.Windows.Forms.Label lblArrayResult;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label1;
     }
 }
 
