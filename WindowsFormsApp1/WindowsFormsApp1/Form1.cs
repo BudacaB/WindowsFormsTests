@@ -20,12 +20,20 @@ namespace WindowsFormsApp1
         }
 
         List<Car> cars = new List<Car>();
+        Car car = null;
+
+        private void listCars(List<Car> cars)
+        {
+            foreach (var auto in cars)
+            {
+                lblArrayResult.Text = auto.ShowBrand();
+            }
+        }
 
         private void btnCreateCar_Click(object sender, EventArgs e)
         {
-            Car car = null;
-            var brand = txtCarBrand.Text.ToUpper();
             
+            var brand = txtCarBrand.Text.ToUpper();
 
             switch (brand)
             {
@@ -51,11 +59,7 @@ namespace WindowsFormsApp1
             }
 
             cars.Add(car);
-
-            foreach (var auto in cars)
-            {
-                lblArrayResult.Text = auto.ShowBrand();
-            }
+            listCars(cars);
         }
 
 

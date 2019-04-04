@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
 
         public override string ShowBrand()
         {
-            return "The brand is a fast Audi";
+            return base.Brand;
         }
     }
 }
