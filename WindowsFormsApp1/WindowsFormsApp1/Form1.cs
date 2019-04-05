@@ -26,7 +26,7 @@ namespace WindowsFormsApp1
         {
             foreach (var auto in cars)
             {
-                lblArrayResult.Text = auto.ShowBrand();
+                lblArrayResult.Text += " " + auto.ShowBrand();
             }
         }
 
