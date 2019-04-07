@@ -41,7 +41,7 @@
             this.numCylinder = new System.Windows.Forms.NumericUpDown();
             this.lblArrayResult = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.ModelType = new System.Windows.Forms.ComboBox();
+            this.modelType = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.numYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCylinder)).BeginInit();
             this.SuspendLayout();
@@ -188,25 +188,25 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "MotelType";
             // 
-            // ModelType
+            // modelType
             // 
-            this.ModelType.FormattingEnabled = true;
-            this.ModelType.Items.AddRange(new object[] {
+            this.modelType.FormattingEnabled = true;
+            this.modelType.Items.AddRange(new object[] {
             "Sedan",
             "SportCoupe",
             "SUV"});
-            this.ModelType.Location = new System.Drawing.Point(611, 113);
-            this.ModelType.MaxDropDownItems = 3;
-            this.ModelType.Name = "ModelType";
-            this.ModelType.Size = new System.Drawing.Size(121, 21);
-            this.ModelType.TabIndex = 16;
+            this.modelType.Location = new System.Drawing.Point(611, 113);
+            this.modelType.MaxDropDownItems = 3;
+            this.modelType.Name = "modelType";
+            this.modelType.Size = new System.Drawing.Size(121, 21);
+            this.modelType.TabIndex = 16;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(762, 399);
-            this.Controls.Add(this.ModelType);
+            this.Controls.Add(this.modelType);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblArrayResult);
             this.Controls.Add(this.numCylinder);
@@ -245,7 +245,7 @@
         private System.Windows.Forms.NumericUpDown numCylinder;
         private System.Windows.Forms.Label lblArrayResult;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox ModelType;
+        private System.Windows.Forms.ComboBox modelType;
     }
 }
 

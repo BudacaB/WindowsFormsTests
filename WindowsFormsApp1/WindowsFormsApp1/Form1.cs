@@ -30,15 +30,15 @@ namespace WindowsFormsApp1
             switch (brand)
             {
                 case ModelsInStock.BMW:
-                    car = new Bemvew(Convert.ToInt32(numYear.Value), txtColor.Text.ToUpperInvariant(), Convert.ToInt32(numCylinder.Value));
+                    car = new Bemvew(Convert.ToInt32(numYear.Value), txtColor.Text.ToUpperInvariant(), Convert.ToInt32(numCylinder.Value), modelType.Text.ToUpperInvariant());
                     lblResult.Text = JsonConvert.SerializeObject(car);
                     break;
                 case ModelsInStock.AUDI:
-                    car = new Audi(Convert.ToInt32(numYear.Value), txtColor.Text.ToUpperInvariant(), Convert.ToInt32(numCylinder.Value));
+                    car = new Audi(Convert.ToInt32(numYear.Value), txtColor.Text.ToUpperInvariant(), Convert.ToInt32(numCylinder.Value), modelType.Text.ToUpperInvariant());
                     lblResult.Text = JsonConvert.SerializeObject(car);
                     break;
                 case ModelsInStock.LANCIA:
-                    car = new Lancia(Convert.ToInt32(numYear.Value), txtColor.Text.ToUpperInvariant(), Convert.ToInt32(numCylinder.Value));
+                    car = new Lancia(Convert.ToInt32(numYear.Value), txtColor.Text.ToUpperInvariant(), Convert.ToInt32(numCylinder.Value), modelType.Text.ToUpperInvariant());
                     lblResult.Text = JsonConvert.SerializeObject(car);     
                     break;
                 case null:

@@ -8,8 +8,8 @@ namespace WindowsFormsApp1
 {
     public class Lancia : Car
     {
-        public Lancia(int paramYear, string paramColor, int paramCylinderNum) : 
-            base("Lancia", paramYear, paramColor, paramCylinderNum)
+        public Lancia(int paramYear, string paramColor, int paramCylinderNum, string paramModelType) : 
+            base("Lancia", paramYear, paramColor, paramCylinderNum, paramModelType)
         {
 
         }

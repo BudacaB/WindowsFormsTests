@@ -8,8 +8,8 @@ namespace WindowsFormsApp1
 {
     public class Audi : Car
     {
-        public Audi(int paramYear, string paramColor, int paramCylinderNum)
-            : base ("AUDI", paramYear, paramColor, paramCylinderNum)
+        public Audi(int paramYear, string paramColor, int paramCylinderNum, string paramModelType)
+            : base ("AUDI", paramYear, paramColor, paramCylinderNum, paramModelType)
         {
 
         }

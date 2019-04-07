@@ -8,8 +8,8 @@ namespace WindowsFormsApp1
 {
     public class Bemvew: Car
     {
-        public Bemvew(int paramYear, string paramColor, int paramCylinderNum)
-            : base ("BMW", paramYear, paramColor, paramCylinderNum)
+        public Bemvew(int paramYear, string paramColor, int paramCylinderNum, string paramModelType)
+            : base ("BMW", paramYear, paramColor, paramCylinderNum, paramModelType)
         {
            
         }

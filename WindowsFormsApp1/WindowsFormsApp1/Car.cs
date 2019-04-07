@@ -12,13 +12,15 @@ namespace WindowsFormsApp1
         public int Year { get; set; }
         public string Color { get; set; }
         public int CylinderNum { get; set; }
+        public string ModelType { get; set; }
 
-        public Car(string paramBrand, int paramYear, string paramColor, int paramCylinderNum)
+        public Car(string paramBrand, int paramYear, string paramColor, int paramCylinderNum, string paramModelType)
         {
             this.Brand = paramBrand;
             this.Year = paramYear;
             this.Color = paramColor;
             this.CylinderNum = paramCylinderNum;
+            this.ModelType = paramModelType;
         }
 
         public virtual string ShowBrand()
